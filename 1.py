@@ -44,6 +44,29 @@ class Simple_drawing_window3(QWidget):
         p.drawPolygon([QPoint(50,200), QPoint(150,200), QPoint(100,400)])
         p.drawPixmap(QRect(200,100,320,320), self.rabbit)
         p.end()
+        
+class Simple_drawing_window4(QWidget):
+    def __init__(self):
+        QWidget.__init__(self, None)
+        self.setWindowTitle("Preme Drawing")
+        self.monkey = QPixmap("images/monkey.png")
+        
+    def paintEvent(self, e):
+        p = QPainter()
+        p.begin(self)
+    
+        # Draw the banana
+        p.setPen(QColor(255, 255, 0))  # Yellow color
+        p.setBrush(QColor(255, 255, 0))
+        p.drawEllipse(100, 100, 50, 200)  # Draw the banana body
+        
+        # Draw the stem
+        p.setPen(QColor(139, 69, 19))  # Brown color for the stem
+        p.setBrush(QColor(139, 69, 19))
+        p.drawRect(115, 50, 20, 50)  # Draw the stem
+        p.drawPixmap(QRect(150,100,320,320), self.monkey)
+        p.end()
+        
 
 def main():
     app = QApplication(sys.argv)
