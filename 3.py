@@ -10,6 +10,7 @@ class Disk(object):
     
     def showdisk(self):
         turtle.penup()
+        print(self.dxpos, self.dypos)
         turtle.goto(self.dxpos, self.dypos)
         turtle.pendown()
         turtle.setheading(0)  
@@ -22,7 +23,6 @@ class Disk(object):
         turtle.forward(self.dheight)
         turtle.left(90)
         turtle.forward(self.dwidth / 2)
-        turtle.hideturtle()
         
     def newpos(self,xpos,ypos):
         self.dxpos = xpos
