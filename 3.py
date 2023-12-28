@@ -36,7 +36,7 @@ class Disk(object):
         turtle.clear()
         turtle.setheading(0)  
         turtle.goto(self.dxpos, self.dypos)
-
+        
 class Hanoi(object):
     def __init__(self, n=3, start="A", workspace="B", destination="C"):
         self.startp = Pole(start, 0, 0)
