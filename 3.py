@@ -10,10 +10,8 @@ class Disk(object):
     
     def showdisk(self):
         turtle.penup()
-        print(self.dxpos, self.dypos)
         turtle.goto(self.dxpos, self.dypos)
         turtle.pendown()
-        turtle.setheading(0)  
         turtle.forward(self.dwidth / 2)
         turtle.left(90)
         turtle.forward(self.dheight)
@@ -57,14 +55,15 @@ class Pole(object):
         turtle.left(90)
           
     def pushdisk(self, disk):
+        disk.newpos(self.pxpos, self.toppos)
         self.stack.append(disk)
         disk.showdisk()
-        self.toppos += 1
+        self.toppos += disk.dheight
     
     def popdisk(self):
         disk = self.stack.pop()
         disk.cleardisk()
-        self.toppos -= 1
+        self.toppos -= disk.dheight
         return disk
 
 class Hanoi(object):
