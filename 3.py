@@ -1,5 +1,7 @@
 import turtle
 
+turtle.speed(0)
+
 class Disk(object):
     def __init__(self, name="", xpos=0, ypos=0, height=20, width=40):
         self.dname = name
@@ -94,3 +96,4 @@ class Hanoi(object):
 
 h = Hanoi()
 h.solve()
+turtle.done()
