@@ -37,21 +37,4 @@ class Disk(object):
         turtle.setheading(0)  
         turtle.goto(self.dxpos, self.dypos)
         
-# Example usage:
-# Create a Disk object
-disk = Disk(name="Disk1", xpos=0, ypos=0, height=20, width=40)
 
-# Show the disk
-disk.showdisk()
-
-# Move the disk to a new position
-disk.newpos(xpos=100, ypos=100)
-
-# Show the disk at the new position
-disk.showdisk()
-
-# Clear the disk from the screen
-disk.cleardisk()
-
-# Keep the window open
-turtle.mainloop()
