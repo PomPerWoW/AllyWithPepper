@@ -29,13 +29,9 @@ class Disk(object):
         self.dypos = ypos
         
     def cleardisk(self):
-        turtle.setheading(0) 
-        turtle.penup()
-        turtle.goto(self.dxpos, self.dypos)
-        turtle.pendown()
-        turtle.clear()
-        turtle.setheading(0)  
-        turtle.goto(self.dxpos, self.dypos)
+        turtle.color("white")
+        self.showdisk()
+        turtle.color("black")
 
 class Pole(object):
     def __init__(self, name="", xpos=0, ypos=0, thick=10, length=100) -> None:
