@@ -36,9 +36,6 @@ class Disk(object):
         turtle.clear()
         turtle.setheading(0)  
         turtle.goto(self.dxpos, self.dypos)
-        
-
-turtle.mainloop()
 
 class Pole(object):
     def __init__(self, name="", xpos=0, ypos=0, thick=10, length=100) -> None:
@@ -78,7 +75,8 @@ class Hanoi(object):
         self.workspacep = Pole(workspace, 150, 0)
         self.destinationp = Pole(destination, 300, 0)
         self.startp.showpole()
-        self.destinationp.showpole(n)
+        self.workspacep.showpole()
+        self.destinationp.showpole()
         for i in range(n):
             self.startp.pushdisk(Disk("d"+str(i), 0, i*150, 20, (n-i)*30))
     
