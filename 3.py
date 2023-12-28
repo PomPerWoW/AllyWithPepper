@@ -48,7 +48,9 @@ class Pole(object):
         self.plength = length
     
     def showpole(self):
-        turtle.goto(self.pxpos, self.pypos)
+        turtle.penup()
+        turtle.goto(self.pxpos - (self.pthick/2), self.pypos)
+        turtle.pendown()
         turtle.fd(self.pthick)
         turtle.left(90)
         turtle.fd(self.plength)
